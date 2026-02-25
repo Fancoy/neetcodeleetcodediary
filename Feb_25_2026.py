@@ -101,3 +101,15 @@ print(your_dict["a"])
 print('d' in your_dict)
 your_dict["a"] = 4
 print(your_dict)
+
+
+#LeetCode TwoSum Problem
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        map = {}
+
+        for a, b in enumerate(nums):
+            difference = target - b
+            if difference in map:
+                return [map[difference], a]
+            map[b] = a
