@@ -197,7 +197,8 @@ super_hero.power_level = 0 # this should print You can't set the power level to 
 # TODO: print the hero's attributes 
 print(f"{super_hero.name} has {super_hero.health} health and {super_hero.power_level} power level")
 
-# LEETCODE
+# @property makes both getting and setting look like normal attribute access, while still running your validation logic behind the scenes.
+
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         if x < 0:
