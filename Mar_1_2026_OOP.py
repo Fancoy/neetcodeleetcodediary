@@ -196,3 +196,26 @@ super_hero.power_level = 0 # this should print You can't set the power level to 
 
 # TODO: print the hero's attributes 
 print(f"{super_hero.name} has {super_hero.health} health and {super_hero.power_level} power level")
+
+# LEETCODE
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+        length = 0
+        temp = x
+        temp2 = x
+        a = 0
+        while temp > 0:
+            temp = temp // 10
+            length += 1
+        while length  > 0:
+            a = (a) + (x % 10) * (pow(10, length - 1))
+            x = x // 10
+            length -= 1
+        if a == temp2:
+            return True
+        return False
+
+
+        
